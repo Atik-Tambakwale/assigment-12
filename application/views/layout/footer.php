@@ -112,7 +112,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="<?php echo base_url()?>AjaxMethods/AssociateAjaxMethods.js"></script>
     <script src="<?php echo base_url()?>AjaxMethods/DashboardAjaxMethods.js"></script>
     <script src="<?php echo base_url()?>AjaxMethods/loginAjaxMethod.js"></script>
-    <script src="<?php echo base_url()?>AjaxMethods/UserAjaxMethods.js"></script>
+
     
     <script>
         function openCity(evt, cityName) {
@@ -189,7 +189,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 Decision(id);
                 Notes(id);
                 Message(id);
-                calendar.render();
+               
             });
         });
        

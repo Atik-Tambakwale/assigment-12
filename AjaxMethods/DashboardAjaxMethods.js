@@ -56,12 +56,6 @@ function loadtaskDates(id) {
 				timeZone: 'UTC',
 				events: add_events,
 				eventColor: '#EEF0FC',
-				dateClick: function () {
-					alert('clicked ' + dateStr);
-				},
-				select: function () {
-					alert('selected ' + startStr + ' to ' + endStr);
-				}
 			});
 			/* 		$('#calendar').render(); */
 

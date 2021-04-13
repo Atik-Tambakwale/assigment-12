@@ -37,7 +37,7 @@ class Task_Model extends CI_Model{
 	public function load_task_dates($id)
 	{
 		$DB2=$this->ConnectDB->connect_db2($id);
-		$data['result']=$DB2->where('assignee',387)->select('title,start_date,due_date')->get('task_tbl')->result();
+		$data['result']=$DB2->select('title,start_date,due_date')->get('task_tbl')->result();
 		foreach ($data['result'] as $key => $value) {
             $data['data'][$key]['title'] = $value->title;
             $data['data'][$key]['start'] = date( "Y-m-d", strtotime($value->start_date));
@@ -50,7 +50,7 @@ class Task_Model extends CI_Model{
 	public function display_task_countable($id)
 	{
 		$DB2=$this->ConnectDB->connect_db2($id); 
-		$query=$DB2->where('assignee',387)->get('task_tbl')->num_rows();
+		$query=$DB2->get('task_tbl')->num_rows();
 		return $query;
 	}
 	public function assigned_task_countable($id)
@@ -63,7 +63,7 @@ class Task_Model extends CI_Model{
 	{
 		$output='';
 		$DB2=$this->ConnectDB->connect_db2($id); 
-		$query=$DB2->where('assignee',387)->get('task_tbl');
+		$query=$DB2->get('task_tbl');
 		if(count($query->result())>=1){
 		$output='<div class="fs-20 fw-600 m-b-5 blue-text">My Tasks</div>
 				';

@@ -10,9 +10,8 @@ class Less_Used_Assoc_Model extends CI_Model{
 	function lu_count_all(){
 		$this->db->select('*');
 		$this->db->from("associate_tbl");
-		$this->db->where('last_seen BETWEEN created_at AND updated_at');
+		$this->db->where('DATEDIFF(CURDATE(), `last_seen`) > 200');
 		$query=$this->db->get();
-		
 		return $query->num_rows();
 	}
 	
@@ -21,7 +20,7 @@ function fetch_Less_Used_Assoc($signup_id){
 		/* $DB2=$this->ConnectDB->connect_db2($signup_id); */
 		$this->db->select('*');
 		$this->db->from('dailygate_primary.associate_tbl AS at');
-		$this->db->where('signup_id',$signup_id)->where('at.last_seen BETWEEN at.created_at AND at.updated_at');;
+		$this->db->where('signup_id',$signup_id)->where('DATEDIFF(CURDATE(), `at`.`last_seen`) > 200');;
 		$this->db->join('dailygate_secondary.department_tbl AS dt','dt.id=at.dept_id');
 	 	$this->db->join('dailygate_secondary.designation_tbl AS dst','dst.id=at.designation_id'); 
 		$query=$this->db->get();

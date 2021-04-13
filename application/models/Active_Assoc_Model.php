@@ -15,7 +15,7 @@ class Active_Assoc_Model extends CI_Model{
 	function lu_count_all(){
 		$this->db->select('*');
 		$this->db->from("associate_tbl");
-		$this->db->where('last_seen BETWEEN created_at AND updated_at');
+		$this->db->where('DATEDIFF(CURDATE(), `last_seen`) > 200');
 		$query=$this->db->get();
 		/* echo $this->db->last_query($query); */
 		return $query->num_rows();

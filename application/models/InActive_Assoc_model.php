@@ -117,7 +117,7 @@ function fetch_InActive_Assoc($signup_id){
 		if(count($query->result())>=1){
 		$output='';
 		foreach ($query->result() as $row) {
-			$output.='<div class="p-5"><img src="http://localhost/assignment-12/assets/images/1.png" alt="" width="20px" style="border-radius: 26px;position: relative;top: 10px;margin: 10px;"><span class="group-icon-photo">'.$row->name.'</span></div>';
+			$output.='<div class="p-5"><img class="group-icon-photo" src="http://localhost/assignment-12/assets/images/1.png" alt="" ><span class="group-icon-photo">'.$row->name.'</span></div>';
 		}
 		$output.='';
 	/* 	echo $output; */

@@ -226,11 +226,11 @@ label, thead td{
 }
 
 .content_group{
-  width: 1159px;
-  margin-left: 5px;
+  width: 498px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background: #F3F3F3 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
 
 .collapsible_notice{
@@ -372,10 +372,20 @@ label, thead td{
       margin-top: 93px;
 } */
 .group-icon-photo{
-  top: 12px;
-    position: relative;
-    font-size: 14px;
-    margin-left: 41px;
+ width: 20px;
+height: 20px;
+background: transparent url('img/Ellipse 23.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+border-radius: 25px;
+margin: 5px;
+}
+.group-un{
+  font-family: Poppins;
+  font-weight: lighter;
+  font-size: 14px;
+  color: #222;
+  letter-spacing: 0;
+  line-height: 21px;
 }
 .h-title_no{
   width: 216px;

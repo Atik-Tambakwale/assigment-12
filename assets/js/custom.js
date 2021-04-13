@@ -129,7 +129,7 @@ $("#donut-chart1").bind("plotclick", function (event, pos, item) {
 /* }); */
 
 
-$('.switchPopover').click(function (e) {
+/* $('.switchPopover').click(function (e) {
 	e.stopPropagation();
 	$('#popover-content').removeClass('hide');
 })
@@ -146,7 +146,7 @@ $(".content").mCustomScrollbar({
 	theme: "dark",
 	mouseWheel: true
 });
-
+ */
 $(document).ready(function () {
 
 	$('.create-task-cta').on("click", function () {
